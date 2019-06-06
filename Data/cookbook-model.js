@@ -16,3 +16,4 @@ getAllDishes,
 function getAllDishes() {
     return db('dishes')
 }
+
