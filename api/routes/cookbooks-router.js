@@ -1,13 +1,13 @@
-const db = require("./cohorts-model"); //has both tables
+const db = require("../../Data/cookbook-model"); //has all tables
 
 const router = require('express').Router();
 
 //install knex and driver
 
-router.get('/:id/students', (req,res) =>{
-    db.getStudents(req.params.id)
-    .then(students => {
-        res.status(200).json(students)
+router.get('/', (req,res) =>{
+    db.getAllDishes()
+    .then(dishes => {
+        res.status(200).json(dishes)
     })
     .catch(error =>{
         res.status(500).json(error)
